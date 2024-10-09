@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMentor - Unified Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+    <header>
+        <h1>EduMentor</h1>
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('signup')">Sign Up</button>
+            <button onclick="showSection('login')">Log In</button>
+            <button onclick="showSection('profile')">Profile Setup</button>
+            <button onclick="showSection('matching')">Mentor Matching</button>
+            <button onclick="showSection('booking')">Book a Session</button>
+            <button onclick="showSection('feedback')">Feedback</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Your Career Journey Starts Here</h2>
+            <p>Join EduMentor today and get matched with a mentor who can guide you to your dream career.</p>
+        </section>
+
+        <!-- Sign Up Section -->
+        <section id="signup" style="display:none;">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <!-- Profile Setup Section -->
+        <section id="profile" style="display:none;">
+            <h2>Profile Setup</h2>
+            <form id="profileForm">
+                <label for="interests">Your Interests:</label>
+                <input type="text" id="interests" name="interests" placeholder="e.g., Software Development, Marketing"
+                    required>
+
+                <label for="skills">Your Skills:</label>
+                <input type="text" id="skills" name="skills" placeholder="e.g., Python, Public Speaking" required>
+
+                <label for="goals">Career Goals:</label>
+                <input type="text" id="goals" name="goals" placeholder="e.g., Become a Data Scientist" required>
+
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+
+        <!-- Mentor Matching Section -->
+        <section id="matching" style="display:none;">
+            <h2>Mentor Matching</h2>
+            <div class="mentor-profile">
+                <h3>John Doe</h3>
+                <p>Expertise: Software Development, AI</p>
+                <button>View Profile</button>
+                <button>Book a Session</button>
+            </div>
+            <div class="mentor-profile">
+                <h3>Jane Smith</h3>
+                <p>Expertise: Marketing, Business Strategy</p>
+                <button>View Profile</button>
+                <button>Book a Session</button>
+            </div>
+        </section>
+
+        <!-- Session Booking Section -->
+        <section id="booking" style="display:none;">
+            <h2>Book a Session</h2>
+            <form id="bookingForm">
+                <label for="mentor">Choose a Mentor:</label>
+                <select id="mentor" name="mentor" required>
+                    <option value="john_doe">John Doe</option>
+                    <option value="jane_smith">Jane Smith</option>
+                </select>
+
+                <label for="date">Choose a Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Choose a Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Book Session</button>
+            </form>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" style="display:none;">
+            <h2>Session Feedback</h2>
+            <form id="feedbackForm">
+                <label for="mentor">Mentor:</label>
+                <select id="mentor" name="mentor" required>
+                    <option value="john_doe">John Doe</option>
+                    <option value="jane_smith">Jane Smith</option>
+                </select>
+
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Share your experience..." required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EduMentor</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
